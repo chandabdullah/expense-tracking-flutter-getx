@@ -1,5 +1,8 @@
-import 'package:_finance_tracking/app/modules/budgets/views/budgets_view.dart';
-import 'package:_finance_tracking/app/modules/home/views/home_view.dart';
+import 'package:_finance_tracking/app/modules/settings/views/settings_view.dart';
+
+import '/app/modules/analytics/views/analytics_view.dart';
+import '/app/modules/budgets/views/budgets_view.dart';
+import '/app/modules/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -31,9 +34,7 @@ class TabsView extends GetView<TabsController> {
           ),
         ),
         PersistentTabConfig(
-          screen: Container(
-            color: Get.theme.scaffoldBackgroundColor,
-          ),
+          screen: const AnalyticsView(),
           item: ItemConfig(
             inactiveIcon: const Icon(Bootstrap.pie_chart),
             icon: const Icon(Bootstrap.pie_chart_fill),
@@ -41,9 +42,7 @@ class TabsView extends GetView<TabsController> {
           ),
         ),
         PersistentTabConfig(
-          screen: Container(
-            color: Get.theme.scaffoldBackgroundColor,
-          ),
+          screen: const SettingsView(),
           item: ItemConfig(
             inactiveIcon: const Icon(Bootstrap.gear),
             icon: const Icon(Bootstrap.gear_fill),
@@ -52,7 +51,7 @@ class TabsView extends GetView<TabsController> {
         ),
       ],
       backgroundColor: Get.theme.cardColor,
-      navBarBuilder: (navBarConfig) => Style7BottomNavBar(
+      navBarBuilder: (navBarConfig) => Style1BottomNavBar(
         navBarConfig: navBarConfig,
       ),
     );

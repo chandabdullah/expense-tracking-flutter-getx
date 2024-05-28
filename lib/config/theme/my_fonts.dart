@@ -1,5 +1,5 @@
-import 'package:_finance_tracking/app/data/local/my_shared_pref.dart';
-import 'package:_finance_tracking/config/translations/localization_service.dart';
+import '/app/data/local/my_shared_pref.dart';
+import '/config/translations/localization_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

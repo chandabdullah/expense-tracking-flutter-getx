@@ -1,4 +1,6 @@
-import 'package:_finance_tracking/app/data/values/app_colors.dart';
+import 'package:_finance_tracking/app/widgets/custom_donut_chart.dart';
+
+import '/app/data/values/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -54,15 +56,4 @@ class HomeController extends GetxController {
   void onClose() {
     super.onClose();
   }
-}
-
-class ChartData {
-  ChartData(
-    this.text,
-    this.value, [
-    this.color,
-  ]);
-  final String text;
-  final double value;
-  final Color? color;
 }

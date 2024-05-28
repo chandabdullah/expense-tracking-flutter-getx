@@ -1,7 +1,9 @@
-import 'package:_finance_tracking/app/components/custom_appbar.dart';
-import 'package:_finance_tracking/app/constants/app_constants.dart';
-import 'package:_finance_tracking/app/data/values/app_colors.dart';
-import 'package:_finance_tracking/app/data/values/app_icons.dart';
+import 'package:_finance_tracking/app/widgets/custom_donut_chart.dart';
+
+import '/app/components/custom_appbar.dart';
+import '/app/constants/app_constants.dart';
+import '/app/data/values/app_colors.dart';
+import '/app/data/values/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -60,52 +62,12 @@ class HomeView extends GetView<HomeController> {
                       SizedBox(
                         height: 170,
                         width: 170,
-                        child: SfCircularChart(
-                          annotations: <CircularChartAnnotation>[
-                            CircularChartAnnotation(
-                              widget: Text(
-                                "\$${controller.totalValue.toStringAsFixed(2)}",
-                                style: Get.textTheme.titleLarge,
-                              ),
-                            ),
-                          ],
-                          margin: const EdgeInsets.all(0),
-                          selectionGesture: ActivationMode.singleTap,
-                          tooltipBehavior: TooltipBehavior(
-                            activationMode: ActivationMode.singleTap,
-                            animationDuration: 0,
-                            borderColor: Get.theme.primaryColor,
-                            color: Get.theme.cardColor,
-                            textStyle: TextStyle(
-                              color: Get.theme.primaryColor,
-                            ),
-                            enable: true,
-                            duration: 1000,
+                        child: CustomDonutChart(
+                          data: controller.reportList,
+                          centerWidget: Text(
+                            "\$${controller.totalValue.toStringAsFixed(2)}",
+                            style: Get.textTheme.titleLarge,
                           ),
-                          series: [
-                            DoughnutSeries<ChartData, String>(
-                              cornerStyle: CornerStyle.bothCurve,
-                              radius: '100%',
-                              innerRadius: "75%",
-                              explodeAll: true,
-                              explode: true,
-                              explodeOffset: "2%",
-                              dataSource: [
-                                for (var item in controller.reportList)
-                                  ChartData(
-                                    item.text,
-                                    item.value,
-                                    item.color,
-                                  ),
-                              ],
-                              strokeWidth: 0,
-                              name: 'Expense',
-                              pointColorMapper: (ChartData data, _) =>
-                                  data.color,
-                              xValueMapper: (ChartData data, _) => data.text,
-                              yValueMapper: (ChartData data, _) => data.value,
-                            ),
-                          ],
                         ),
                       ),
                       const Gap(20),

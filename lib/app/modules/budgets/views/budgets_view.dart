@@ -1,7 +1,9 @@
-import 'package:_finance_tracking/app/components/custom_appbar.dart';
-import 'package:_finance_tracking/app/constants/app_constants.dart';
-import 'package:_finance_tracking/app/data/values/app_colors.dart';
-import 'package:_finance_tracking/app/data/values/app_icons.dart';
+import 'package:_finance_tracking/app/components/custom_box_shadow.dart';
+
+import '/app/components/custom_appbar.dart';
+import '/app/constants/app_constants.dart';
+import '/app/data/values/app_colors.dart';
+import '/app/data/values/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
@@ -29,13 +31,7 @@ class BudgetsView extends GetView<BudgetsController> {
                 decoration: BoxDecoration(
                   color: Get.theme.cardColor,
                   borderRadius: BorderRadius.circular(kBorderRadius),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Get.theme.splashColor,
-                      blurRadius: 5,
-                      spreadRadius: 3,
-                    ),
-                  ],
+                  boxShadow: customBoxShadow(),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,13 +93,7 @@ class BudgetsView extends GetView<BudgetsController> {
                 decoration: BoxDecoration(
                   color: Get.theme.cardColor,
                   borderRadius: BorderRadius.circular(kBorderRadius),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Get.theme.splashColor,
-                      blurRadius: 5,
-                      spreadRadius: 3,
-                    ),
-                  ],
+                  boxShadow: customBoxShadow(),
                 ),
                 child: Row(
                   children: [
@@ -170,13 +160,7 @@ class BudgetsView extends GetView<BudgetsController> {
                 decoration: BoxDecoration(
                   color: Get.theme.cardColor,
                   borderRadius: BorderRadius.circular(kBorderRadius),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Get.theme.splashColor,
-                      blurRadius: 5,
-                      spreadRadius: 3,
-                    ),
-                  ],
+                  boxShadow: customBoxShadow(),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,

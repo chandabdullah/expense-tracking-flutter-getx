@@ -1,6 +1,6 @@
-import 'package:_finance_tracking/config/theme/dark_theme_colors.dart';
-import 'package:_finance_tracking/config/theme/light_theme_colors.dart';
-import 'package:_finance_tracking/config/theme/my_styles.dart';
+import '/config/theme/dark_theme_colors.dart';
+import '/config/theme/light_theme_colors.dart';
+import '/config/theme/my_styles.dart';
 import 'package:flutter/material.dart';
 
 class MyTheme {
