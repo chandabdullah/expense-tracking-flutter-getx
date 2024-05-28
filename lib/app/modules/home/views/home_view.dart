@@ -1,3 +1,7 @@
+import 'package:_finance_tracking/app/components/custom_appbar.dart';
+import 'package:_finance_tracking/app/constants/app_constants.dart';
+import 'package:_finance_tracking/app/data/values/app_colors.dart';
+import 'package:_finance_tracking/app/data/values/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -13,28 +17,8 @@ class HomeView extends GetView<HomeController> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "\$6500",
-            style: Get.textTheme.titleLarge!.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          centerTitle: false,
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                OctIcons.history,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                OctIcons.bell,
-              ),
-            ),
-          ],
+        appBar: customAppBar(
+          "\$6500",
           bottom: const TabBar(
             tabs: [
               Tab(text: "Expense"),
@@ -47,8 +31,8 @@ class HomeView extends GetView<HomeController> {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(15),
-                  color: Get.theme.cardColor,
+                  padding: const EdgeInsets.all(kPadding),
+                  color: Get.theme.scaffoldBackgroundColor,
                   child: Column(
                     children: [
                       Row(
@@ -74,9 +58,17 @@ class HomeView extends GetView<HomeController> {
                       ),
                       const Gap(10),
                       SizedBox(
-                        height: 150,
-                        width: 150,
+                        height: 170,
+                        width: 170,
                         child: SfCircularChart(
+                          annotations: <CircularChartAnnotation>[
+                            CircularChartAnnotation(
+                              widget: Text(
+                                "\$${controller.totalValue.toStringAsFixed(2)}",
+                                style: Get.textTheme.titleLarge,
+                              ),
+                            ),
+                          ],
                           margin: const EdgeInsets.all(0),
                           selectionGesture: ActivationMode.singleTap,
                           tooltipBehavior: TooltipBehavior(
@@ -94,19 +86,25 @@ class HomeView extends GetView<HomeController> {
                             DoughnutSeries<ChartData, String>(
                               cornerStyle: CornerStyle.bothCurve,
                               radius: '100%',
+                              innerRadius: "75%",
+                              explodeAll: true,
+                              explode: true,
+                              explodeOffset: "2%",
                               dataSource: [
-                                ChartData('David', 20, Colors.orange),
-                                ChartData('Steve', 30, Colors.pink),
-                                ChartData('Jack', 40, Colors.green),
-                                ChartData('Others', 55, Colors.yellow),
-                                ChartData('Others', 35, Colors.teal),
+                                for (var item in controller.reportList)
+                                  ChartData(
+                                    item.text,
+                                    item.value,
+                                    item.color,
+                                  ),
                               ],
+                              strokeWidth: 0,
                               name: 'Expense',
                               pointColorMapper: (ChartData data, _) =>
                                   data.color,
-                              xValueMapper: (ChartData data, _) => data.x,
-                              yValueMapper: (ChartData data, _) => data.y,
-                            )
+                              xValueMapper: (ChartData data, _) => data.text,
+                              yValueMapper: (ChartData data, _) => data.value,
+                            ),
                           ],
                         ),
                       ),
@@ -123,28 +121,45 @@ class HomeView extends GetView<HomeController> {
                     ],
                   ),
                 ),
+                const Gap(10),
                 ListView.separated(
-                  itemCount: 7,
+                  itemCount: controller.reportList.length,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  separatorBuilder: (_, index) => const Gap(10),
+                  separatorBuilder: (_, index) => Gap(
+                    10,
+                    color: Get.theme.cardColor,
+                  ),
                   itemBuilder: (context, index) {
+                    ChartData item = controller.reportList[index];
                     return ListTile(
-                      leading: Icon(Icons.car_crash_outlined),
+                      tileColor: Get.theme.cardColor,
+                      leading: Container(
+                        padding: const EdgeInsets.all(7),
+                        decoration: BoxDecoration(
+                          color: AppColors.getCategoryColor(item.text)
+                              .withOpacity(.2),
+                          borderRadius: BorderRadius.circular(kBorderRadius),
+                        ),
+                        child: Icon(
+                          AppIcons.getCategoryIcon(item.text),
+                          color: AppColors.getCategoryColor(item.text),
+                        ),
+                      ),
                       title: Text(
-                        "Public transport",
+                        item.text,
                         style: Get.textTheme.titleMedium,
                       ),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            "31%",
+                            "${controller.calculatePercentage(item.value.abs())}%",
                             style: Get.textTheme.bodySmall,
                           ),
                           const Gap(20),
                           Text(
-                            "-59.91\$",
+                            "${item.value}\$",
                             style: Get.textTheme.bodyLarge,
                           ),
                         ],
@@ -159,11 +174,4 @@ class HomeView extends GetView<HomeController> {
       ),
     );
   }
-}
-
-class ChartData {
-  ChartData(this.x, this.y, [this.color]);
-  final String x;
-  final double y;
-  final Color? color;
 }

@@ -5,12 +5,13 @@ class DarkThemeColors {
 
   static Color customPrimaryColor = const Color(0xFF078dc4);
   static Color customSecondaryColor = const Color(0xFF4268b3);
+  static Color customTertiaryColor = const Color(0xFF98bafa);
 
   static Color primaryColor = customPrimaryColor;
   static Color secondaryColor = customSecondaryColor;
   // static const Color primaryColor = Color(0xFFF0F0F0);
   // static const Color primaryColor = Color(0xFF7343be);
-  static Color accentColor = primaryColor;
+  static Color tertiaryColor = customTertiaryColor;
 
   //Appbar
   static const Color appBarColor = Color(0xFF0F131D);

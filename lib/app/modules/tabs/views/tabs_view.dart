@@ -1,6 +1,10 @@
+import 'package:_finance_tracking/app/modules/budgets/views/budgets_view.dart';
+import 'package:_finance_tracking/app/modules/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:icons_plus/icons_plus.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../controllers/tabs_controller.dart';
 
@@ -8,16 +12,48 @@ class TabsView extends GetView<TabsController> {
   const TabsView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('TabsView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'TabsView is working',
-          style: TextStyle(fontSize: 20),
+    return PersistentTabView(
+      tabs: [
+        PersistentTabConfig(
+          screen: const HomeView(),
+          item: ItemConfig(
+            inactiveIcon: const Icon(Bootstrap.house_door),
+            icon: const Icon(Bootstrap.house_door_fill),
+            title: "Home",
+          ),
         ),
+        PersistentTabConfig(
+          screen: const BudgetsView(),
+          item: ItemConfig(
+            inactiveIcon: const Icon(Bootstrap.bar_chart),
+            icon: const Icon(Bootstrap.bar_chart_fill),
+            title: "Budgets",
+          ),
+        ),
+        PersistentTabConfig(
+          screen: Container(
+            color: Get.theme.scaffoldBackgroundColor,
+          ),
+          item: ItemConfig(
+            inactiveIcon: const Icon(Bootstrap.pie_chart),
+            icon: const Icon(Bootstrap.pie_chart_fill),
+            title: "Analytics",
+          ),
+        ),
+        PersistentTabConfig(
+          screen: Container(
+            color: Get.theme.scaffoldBackgroundColor,
+          ),
+          item: ItemConfig(
+            inactiveIcon: const Icon(Bootstrap.gear),
+            icon: const Icon(Bootstrap.gear_fill),
+            title: "Settings",
+          ),
+        ),
+      ],
+      backgroundColor: Get.theme.cardColor,
+      navBarBuilder: (navBarConfig) => Style7BottomNavBar(
+        navBarConfig: navBarConfig,
       ),
     );
   }

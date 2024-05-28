@@ -7,16 +7,18 @@ class LightThemeColors {
   // static Color customPrimaryColor = const Color(0xFF0f71cb);
   static Color customPrimaryColor = const Color(0xFF007aff);
   static Color customSecondaryColor = const Color(0xFF016ee5);
+  static Color customTertiaryColor = const Color(0xFF98bafa);
 
   static Color primaryColor = customPrimaryColor;
   static Color secondaryColor = customSecondaryColor;
-  static Color accentColor = primaryColor;
+  static Color tertiaryColor = customTertiaryColor;
 
   //SCAFFOLD
   // static const Color scaffoldBackgroundColor = Color(0xFFFFFFFF); //? White
+  static const Color scaffoldBackgroundColor = Color(0xFFf7fbfe); //?
   // static const Color scaffoldBackgroundColor = Color(0xFFf5f5f5); //? Light Gray
   // static const Color scaffoldBackgroundColor = Color(0xFFF8F8F8); //? Off-White
-  static const Color scaffoldBackgroundColor = Color(0xFFECEFF1); //? Light Blue
+  // static const Color scaffoldBackgroundColor = Color(0xFFECEFF1); //? Light Blue
   // static const Color scaffoldBackgroundColor = Color(0xFFEDEDED); //? Pale Gray
   // static const Color scaffoldBackgroundColor = Color(0xFFF0F0F0); //? Light Gray
   // static const Color scaffoldBackgroundColor = Color(0xFFFAFAFA); //? Off white

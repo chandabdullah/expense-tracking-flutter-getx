@@ -83,10 +83,11 @@ class MyStyles {
         ),
         bodySmall: Get.textTheme.bodySmall?.copyWith(
           color: isLightTheme
-              ? LightThemeColors.bodyTextColor
-              : DarkThemeColors.bodyTextColor,
+              ? LightThemeColors.hintTextColor
+              : DarkThemeColors.hintTextColor,
         ),
         displayLarge: Get.textTheme.displayLarge?.copyWith(
+          fontWeight: FontWeight.bold,
           color: isLightTheme
               ? LightThemeColors.bodyTextColor
               : DarkThemeColors.bodyTextColor,
@@ -102,6 +103,7 @@ class MyStyles {
               : DarkThemeColors.bodyTextColor,
         ),
         headlineLarge: Get.textTheme.headlineLarge?.copyWith(
+          fontWeight: FontWeight.bold,
           color: isLightTheme
               ? LightThemeColors.bodyTextColor
               : DarkThemeColors.bodyTextColor,
@@ -117,6 +119,7 @@ class MyStyles {
               : DarkThemeColors.bodyTextColor,
         ),
         titleLarge: Get.textTheme.titleLarge?.copyWith(
+          fontWeight: FontWeight.bold,
           color: isLightTheme
               ? LightThemeColors.bodyTextColor
               : DarkThemeColors.bodyTextColor,
@@ -130,6 +133,11 @@ class MyStyles {
           color: isLightTheme
               ? LightThemeColors.bodyTextColor
               : DarkThemeColors.bodyTextColor,
+        ),
+        labelSmall: Get.textTheme.labelSmall?.copyWith(
+          color: isLightTheme
+              ? LightThemeColors.captionTextColor
+              : DarkThemeColors.captionTextColor,
         ),
       );
 

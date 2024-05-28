@@ -16,10 +16,12 @@ class MyTheme {
           ? ColorScheme.light(
               primary: LightThemeColors.primaryColor,
               secondary: LightThemeColors.secondaryColor,
+              tertiary: LightThemeColors.tertiaryColor,
             )
           : ColorScheme.dark(
               primary: DarkThemeColors.primaryColor,
               secondary: DarkThemeColors.secondaryColor,
+              tertiary: DarkThemeColors.tertiaryColor,
             ),
 
       // color contrast (if the theme is dark text should be white for example)
