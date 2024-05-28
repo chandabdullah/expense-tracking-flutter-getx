@@ -1,16 +1,42 @@
-# _finance_tracking
+# Finance Tracker
+## _Manage your expense & income_
 
-A new Flutter project.
+### Objective
+Create a mobile application for financial control and budgeting, facilitating the management of personal expenses.
 
-## Getting Started
+### Features
 
-This project is a starting point for a Flutter application.
+- Add your daily expense
+- Manage your expenses and incomes
+- View your monthly report
+- Limit your budget accordingly
+- View your expense analytics
 
-A few resources to get you started if this is your first Flutter project:
+### Preview
+<table>
+  <tr>
+    <td>
+    <h3>Manage your expense</h3>
+      <img src="https://github.com/chandabdullah/finance_tracking/blob/main/assets/images/01.png" height="500" alt="01.png"/>
+    </td>
+    <td>
+      <h3>Limit your budget</h3>
+      <img src="https://github.com/chandabdullah/finance_tracking/blob/main/assets/images/02.png" height="500" alt="02.png"/>
+    </td>
+    <td>
+      <h3>Analytics & Charts</h3>
+      <img src="https://github.com/chandabdullah/finance_tracking/blob/main/assets/images/03.png" height="500" alt="profile.png"/>
+    </td>
+    <td>
+      <h3>Settings</h3>
+      <img src="https://github.com/chandabdullah/finance_tracking/blob/main/assets/images/04.png" height="500" alt="04.png"/>
+    </td>
+  </tr>
+</table>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## License
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+MIT
+
+**Free Software © 2024**
+Next Level Software | Abdullah
