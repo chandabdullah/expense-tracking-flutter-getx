@@ -4,8 +4,10 @@ import 'package:get/get.dart';
 class AppColors {
   static Color getCategoryColor(String category) {
     switch (category.trim().toLowerCase()) {
+      case 'salary':
+        return Colors.green;
       case 'shopping':
-        return Colors.yellow;
+        return Colors.amber;
       case 'cafe':
         return Colors.orange;
       case 'public transport' || 'transport':
@@ -17,7 +19,7 @@ class AppColors {
       case 'family':
         return Colors.pink;
       case 'crypto':
-        return Colors.lime;
+        return Colors.lightBlue;
       case 'gifts' || 'gift':
         return Colors.blueGrey;
       case 'education':
@@ -26,10 +28,6 @@ class AppColors {
         return Colors.purple;
       case 'traveling':
         return Colors.lightGreen;
-      case 'pets':
-        return Colors.brown;
-      case 'baby':
-        return Colors.indigo;
       case 'leisure':
         return Colors.lightBlue;
       case 'spotify':

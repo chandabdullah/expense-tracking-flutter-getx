@@ -8,6 +8,7 @@ abstract class Routes {
   static const BUDGETS = _Paths.BUDGETS;
   static const ANALYTICS = _Paths.ANALYTICS;
   static const SETTINGS = _Paths.SETTINGS;
+  static const HISTORY = _Paths.HISTORY;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const BUDGETS = '/budgets';
   static const ANALYTICS = '/analytics';
   static const SETTINGS = '/settings';
+  static const HISTORY = '/history';
 }

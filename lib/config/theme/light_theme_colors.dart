@@ -24,7 +24,7 @@ class LightThemeColors {
   // static const Color scaffoldBackgroundColor = Color(0xFFFAFAFA); //? Off white
 
   static const Color backgroundColor = Colors.white;
-  static const Color dividerColor = Color(0xFFC3C3C3);
+  static const Color dividerColor = Color(0xFFE4E4E4);
   static const Color cardColor = Colors.white;
 
   //APPBAR

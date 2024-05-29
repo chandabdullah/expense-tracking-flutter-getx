@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 enum IconType {
   outlined,
@@ -11,68 +12,66 @@ class AppIcons {
     IconType iconType = IconType.solid,
   ]) {
     switch (category.trim().toLowerCase()) {
+      case 'salary':
+        return iconType == IconType.outlined
+            ? Bootstrap.currency_dollar
+            : Bootstrap.currency_dollar;
       case 'shopping':
         return iconType == IconType.outlined
-            ? Icons.shopping_cart_outlined
-            : Icons.shopping_cart;
+            ? Bootstrap.cart
+            : Bootstrap.cart_fill;
       case 'cafe':
         return iconType == IconType.outlined
-            ? Icons.coffee_outlined
-            : Icons.coffee;
+            ? Bootstrap.cup_hot
+            : Bootstrap.cup_hot_fill;
       case 'public transport' || 'transport':
         return iconType == IconType.outlined
-            ? Icons.directions_car_filled_outlined
-            : Icons.directions_car_filled;
+            ? Bootstrap.bus_front
+            : Bootstrap.bus_front_fill;
       case 'petrol':
         return iconType == IconType.outlined
-            ? Icons.wallet_outlined
-            : Icons.wallet;
+            ? Bootstrap.fuel_pump
+            : Bootstrap.fuel_pump_fill;
       case 'health':
         return iconType == IconType.outlined
-            ? Icons.local_hospital_outlined
-            : Icons.local_hospital;
+            ? Bootstrap.hospital
+            : Bootstrap.hospital_fill;
       case 'family':
         return iconType == IconType.outlined
-            ? Icons.people_outlined
-            : Icons.people;
+            ? Bootstrap.people
+            : Bootstrap.people_fill;
       case 'crypto':
         return iconType == IconType.outlined
-            ? Icons.currency_exchange_outlined
-            : Icons.currency_exchange;
+            ? Bootstrap.currency_bitcoin
+            : Bootstrap.currency_bitcoin;
       case 'gifts' || 'gift':
         return iconType == IconType.outlined
-            ? Icons.card_giftcard_outlined
-            : Icons.card_giftcard;
+            ? Bootstrap.gift
+            : Bootstrap.gift_fill;
       case 'education':
         return iconType == IconType.outlined
-            ? Icons.menu_book_outlined
-            : Icons.menu_book;
+            ? Bootstrap.book
+            : Bootstrap.book_half;
       case 'sport':
         return iconType == IconType.outlined
-            ? Icons.sports_outlined
-            : Icons.sports;
+            ? Bootstrap.trophy
+            : Bootstrap.trophy_fill;
       case 'traveling':
         return iconType == IconType.outlined
-            ? Icons.location_on_outlined
-            : Icons.location_on;
-      case 'pets':
-        return iconType == IconType.outlined ? Icons.pets_outlined : Icons.pets;
-      case 'baby':
-        return iconType == IconType.outlined
-            ? Icons.emoji_emotions_outlined
-            : Icons.emoji_emotions;
+            ? Bootstrap.pin_map
+            : Bootstrap.pin_map_fill;
       case 'leisure':
         return iconType == IconType.outlined
-            ? Icons.sports_esports_outlined
-            : Icons.sports_esports;
+            ? Bootstrap.dpad
+            : Bootstrap.dpad_fill;
       case 'spotify':
         return iconType == IconType.outlined
-            ? Icons.music_note_outlined
-            : Icons.music_note;
+            ? Bootstrap.spotify
+            : Bootstrap.spotify;
       case 'removal':
         return iconType == IconType.outlined
-            ? Icons.remove_outlined
-            : Icons.remove;
+            ? Bootstrap.trash
+            : Bootstrap.trash_fill;
       default:
         return Icons.shopping_bag;
     }

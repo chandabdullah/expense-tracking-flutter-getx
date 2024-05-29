@@ -1,3 +1,4 @@
+import 'package:expense_tracking/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -20,7 +21,9 @@ AppBar customAppBar(
     actions: actions ??
         [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(Routes.HISTORY);
+            },
             icon: const Icon(
               OctIcons.history,
             ),
