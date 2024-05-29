@@ -31,43 +31,8 @@ class AnalyticsController extends GetxController {
     ),
     ChartData(
       "Family",
-      -173.6,
+      -173.5,
       AppColors.getCategoryColor('Health'),
-    ),
-    ChartData(
-      "Gifts",
-      -23.5,
-      AppColors.getCategoryColor('Gifts'),
-    ),
-    ChartData(
-      "Crypto",
-      -123.7,
-      AppColors.getCategoryColor('Crypto'),
-    ),
-    ChartData(
-      "Education",
-      -83.3,
-      AppColors.getCategoryColor('Education'),
-    ),
-    ChartData(
-      "Sport",
-      -53.9,
-      AppColors.getCategoryColor('Sport'),
-    ),
-    ChartData(
-      "Traveling",
-      -33.4,
-      AppColors.getCategoryColor('Traveling'),
-    ),
-    ChartData(
-      "Spotify",
-      -13.4,
-      AppColors.getCategoryColor('Spotify'),
-    ),
-    ChartData(
-      "Removal",
-      -23.4,
-      AppColors.getCategoryColor('Removal'),
     ),
   ];
 
