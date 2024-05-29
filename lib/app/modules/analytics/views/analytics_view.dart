@@ -1,10 +1,10 @@
-import 'package:_finance_tracking/app/components/custom_appbar.dart';
-import 'package:_finance_tracking/app/components/custom_box_shadow.dart';
-import 'package:_finance_tracking/app/constants/app_constants.dart';
-import 'package:_finance_tracking/app/data/values/app_colors.dart';
-import 'package:_finance_tracking/app/data/values/app_icons.dart';
-import 'package:_finance_tracking/app/widgets/custom_bar_chart.dart';
-import 'package:_finance_tracking/app/widgets/custom_donut_chart.dart';
+import 'package:expense_tracking/app/components/custom_appbar.dart';
+import 'package:expense_tracking/app/components/custom_box_shadow.dart';
+import 'package:expense_tracking/app/constants/app_constants.dart';
+import 'package:expense_tracking/app/data/values/app_colors.dart';
+import 'package:expense_tracking/app/data/values/app_icons.dart';
+import 'package:expense_tracking/app/widgets/custom_bar_chart.dart';
+import 'package:expense_tracking/app/widgets/custom_donut_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

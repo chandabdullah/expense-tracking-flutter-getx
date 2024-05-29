@@ -1,4 +1,4 @@
-import 'package:_finance_tracking/app/modules/settings/views/settings_view.dart';
+import 'package:expense_tracking/app/modules/settings/views/settings_view.dart';
 
 import '/app/modules/analytics/views/analytics_view.dart';
 import '/app/modules/budgets/views/budgets_view.dart';

@@ -1,5 +1,5 @@
-import 'package:_finance_tracking/app/components/custom_appbar.dart';
-import 'package:_finance_tracking/app/constants/app_constants.dart';
+import 'package:expense_tracking/app/components/custom_appbar.dart';
+import 'package:expense_tracking/app/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

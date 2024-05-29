@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.nls" "\0"
-            VALUE "FileDescription", "_finance_tracking" "\0"
+            VALUE "FileDescription", "expense_tracking" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "_finance_tracking" "\0"
+            VALUE "InternalName", "expense_tracking" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.nls. All rights reserved." "\0"
-            VALUE "OriginalFilename", "_finance_tracking.exe" "\0"
-            VALUE "ProductName", "_finance_tracking" "\0"
+            VALUE "OriginalFilename", "expense_tracking.exe" "\0"
+            VALUE "ProductName", "expense_tracking" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

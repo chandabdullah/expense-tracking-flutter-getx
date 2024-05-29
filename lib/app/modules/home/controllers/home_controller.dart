@@ -1,4 +1,4 @@
-import 'package:_finance_tracking/app/widgets/custom_donut_chart.dart';
+import 'package:expense_tracking/app/widgets/custom_donut_chart.dart';
 
 import '/app/data/values/app_colors.dart';
 import 'package:flutter/material.dart';

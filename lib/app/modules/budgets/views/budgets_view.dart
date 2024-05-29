@@ -1,4 +1,4 @@
-import 'package:_finance_tracking/app/components/custom_box_shadow.dart';
+import 'package:expense_tracking/app/components/custom_box_shadow.dart';
 
 import '/app/components/custom_appbar.dart';
 import '/app/constants/app_constants.dart';

@@ -1,4 +1,4 @@
-import 'package:_finance_tracking/app/constants/app_constants.dart';
+import 'package:expense_tracking/app/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';

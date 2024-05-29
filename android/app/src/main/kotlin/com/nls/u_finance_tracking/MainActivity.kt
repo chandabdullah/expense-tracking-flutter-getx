@@ -1,4 +1,4 @@
-package com.nls.u_finance_tracking
+package com.nls.uexpense_tracking
 
 import io.flutter.embedding.android.FlutterActivity
 

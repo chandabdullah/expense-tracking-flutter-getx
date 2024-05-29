@@ -1,4 +1,4 @@
-import 'package:_finance_tracking/app/widgets/custom_donut_chart.dart';
+import 'package:expense_tracking/app/widgets/custom_donut_chart.dart';
 
 import '/app/components/custom_appbar.dart';
 import '/app/constants/app_constants.dart';

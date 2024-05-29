@@ -1,4 +1,4 @@
-import 'package:_finance_tracking/app/modules/settings/controllers/settings_controller.dart';
+import 'package:expense_tracking/app/modules/settings/controllers/settings_controller.dart';
 
 import '/app/modules/analytics/controllers/analytics_controller.dart';
 import '/app/modules/budgets/controllers/budgets_controller.dart';

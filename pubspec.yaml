@@ -1,7 +1,7 @@
-name: _finance_tracking
+name: expense_tracking
 version: 1.0.0+1
 publish_to: none
-description: A new Flutter project.
+description: Expense Tracking App in Flutter with GetX State Management
 environment: 
   sdk: '>=3.3.4 <4.0.0'
 
